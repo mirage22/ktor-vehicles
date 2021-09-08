@@ -1,0 +1,66 @@
+###
+GET http://localhost:8080/
+
+###
+GET http://localhost:8080/vehicle
+
+###
+POST http://localhost:8080/vehicle
+
+###
+GET http://localhost:8080/vehicle/{{id}}
+
+###
+DELETE http://localhost:8080/vehicle/{{id}}
+
+###
+GET http://localhost:8080/vehicles
+Content-Type: application/json
+
+[
+  {
+    "id": 1,
+    "desc": "car-1",
+    "maxSpeed": 210
+  },
+  {
+    "id": 2,
+    "desc": "car-2",
+    "maxSpeed": 220
+  },
+  {
+    "id": 3,
+    "desc": "car-3",
+    "maxSpeed": 230
+  }
+]
+
+
+###
+GET http://localhost:8080/
+
+###
+GET http://localhost:8080/vehicle
+
+###
+POST http://localhost:8080/vehicle
+Content-Type: application/json; charset=UTF-8
+
+{
+    "id": 4,
+    "desc": "car-1",
+    "maxSpeed": 210
+}
+
+
+
+###
+GET http://localhost:8080/vehicle/4
+
+###
+DELETE http://localhost:8080/vehicle/4
+
+
+
+###
+GET http://localhost:8080/vehicles
